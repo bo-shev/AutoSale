@@ -1,0 +1,258 @@
+html
+{
+    font-family: sans-serif;
+}
+
+.topmenu
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sitename
+{
+    display: inline-block;
+    text-align: start !important;
+}
+
+.sitename > a
+{
+    border-bottom-style: solid;
+    border-bottom-color: #cbcbcb;
+    border-bottom-width: 2px;
+    font-size: 35px !important;
+    margin-right: 2vw;
+}
+
+.buttons 
+{
+    display: inline-block;
+    position: absolute;
+    margin-top: 2.2vh;
+    padding-left: 0.5vw;
+    min-width: 500px;
+}
+
+.buttons > li
+{
+    display: inline-block;
+    margin-left: 0.6vw;
+}
+
+.buttons > li > a:hover
+{
+    color: #ffffff;
+}
+
+.buttons > li > a
+{
+    color: #cbcbcb; /* цвет текста */
+
+    text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
+
+    font-size: 17px;
+
+    font-family: Century Gothic, serif;
+}
+
+.rightalign
+{
+    display: inline-block;
+    float: right;
+}
+
+.borderedbuttons
+{
+    display: inline-block;
+    float: right;
+    margin-top: 2.8vh;
+    padding-left: 0px;
+}
+
+.borderedbuttons > li
+{
+    display: inline-block;
+    margin-left: 1vw;
+    border: 1px #cbcbcb solid;
+    padding: 8px;
+    text-align: center;
+}
+
+.borderedbuttons a
+{
+    color: #cbcbcb; /* цвет текста */
+    text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
+    font-size: 16px;
+    font-family: Century Gothic, serif;
+}
+
+.borderedbuttons a:hover
+{
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: Century Gothic;
+    src: url("fonts/CenturyGothic.ttf");
+}
+
+.langmenu
+{
+    display: inline-block;
+    float: right;
+    vertical-align: center;
+    padding-left: 2vw;
+}
+
+.langmenu > li
+{
+    display: block;
+    margin-top: 0.9vh;
+    margin-bottom: 0.6vh;
+}
+
+.logoclass
+{
+    top: 0;
+    left: 0;
+    margin-top: 0.1vh;
+}
+
+.mainHead
+{
+    margin-left: 10vw; /* убрать внутренние отступы */
+    margin-right: 1vw;
+    min-width: 970px;
+}
+
+header
+{
+    position: fixed;
+    z-index: 1;
+    padding: 0; /* убрать внешние отступы */
+    top: 0; left: 0;
+    width: 100%;
+
+    border-bottom: #cbcbcb 2px solid;
+    
+    background:  #4e4e4e;  ;
+}
+
+.searchform
+{
+    display: inline-block;
+    margin-top: 100px;
+    background-color: #4e4e4e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.searchtable
+{
+    border: #cbcbcb 1px solid;
+}
+
+.searchtable td
+{
+    color: #cbcbcb;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.searchtable select
+{
+    font-family: Century Gothic, serif;
+    background-color: #404040;
+    color: #cbcbcb;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 25px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 6px;
+}
+
+.searchtable option
+{
+    font-family: Century Gothic, serif;
+    color: #cbcbcb;
+}
+
+.markselect, .modelselect, .stateselect
+{
+    width: 200px;
+}
+
+
+.searchtable input[type=number]
+{
+    font-family: Century Gothic, serif;
+    background-color: #404040;
+    color: #cbcbcb;
+    font-size: 16px;
+    height: 21px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: #7e7e7e 1px solid;
+}
+
+.costfrom, .costto
+{
+    width: 92px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.fuelselect
+{
+    width: 170px;
+}
+
+.powerfrom, .powerto
+{
+    width: 77px;
+}
+
+.volumefrom, .volumeto
+{
+    width: 77px;
+}
+
+.yearfrom, .yearto
+{
+    width: 83px;
+}
+
+.distancefrom, .distanceto
+{
+    width: 90px;
+}
+
+.searchbutton div
+{
+    border: #cbcbcb 1px solid;
+    text-align: center;
+    float: right;
+    padding: 10px;
+    background-color: #404040;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.searchbutton a
+{
+    color: #cbcbcb; /* цвет текста */
+    text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
+    font-size: 17px;
+    font-family: Century Gothic, serif;
+}
+
+.searchbutton a:hover
+{
+    color: white;
+}

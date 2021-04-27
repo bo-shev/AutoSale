@@ -1,67 +1,23 @@
-
 <?
 function previewCar($id_car)
 {
     
 echo '
-<style>
-
-/* Display the columns below each other instead of side by side on small screens */
-
-    .column {
-        width: 100%;
-        display: block;
-        padding: 0 8px;
-        margin-bottom: 16px;
-    }
-
-
-/* Add some shadows to create a card effect */
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Some left and right padding inside the container */
-.container {
-    padding: 0 16px;
-}
-
-/* Clear floats */
-.container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-
-
-
-.price
-{
-    display: block;
-    float: right;
-}
-
-.button:hover {
-    background-color: #555;
-}
-</style>
-
-
-
-
-<form name="myform'.$id_car.'" action="vievcar.php" method="post">
-    <input type="hidden" name="test" value='.$id_car.' /><br/>
+    
+<form class="search_result" name="myform'.$id_car.'" action="vievcar.php" method="post">
+    <input type="hidden" name="test" value='.$id_car.' />
     <a href="javascript: submitMy('.$id_car.')">
 
-
+    <div class="column">
 ';
 
 
 
 //include_once 'vievcar.php' ;
 echo' 
-<div class="column">
+
+
+
     <div class="card">
     ';
      include_once 'conect.php';
@@ -72,7 +28,7 @@ echo'
 
      foreach($dbh->query($sql) as $row)
          {
-            echo '<img src='.$row["pach_poto"].' alt="Car" style="width:100%">';
+            echo '<img src='.$row["pach_poto"].' alt="Car" style="width:98%;margin-top:6px">';
             break;
          }
  
@@ -82,26 +38,49 @@ echo'
          echo '<div class="container">';
          foreach($dbh->query($sql) as $row)
          {
-             echo '<span>'.$row["brand"].' '.$row["model"].'</span> ';
+             echo '<span class="carName">'.$row["brand"].' '.$row["model"].' </span>';
              echo '<span class="price">$'.$row["price"].'</span>';
+            //  style ="width:200px
+             $carInfoTable = '<div class="carInfo">
+             <table>
+                 <tr>
+                     <td>Пробіг:</td>
+                     <td>'.$row["distance"].'км</td>
+                     <td>Стан:</td>
+                     <td>'.$row["car_condition"].'</td>
+                 </tr>
+                 <tr>
+                     <td>Рік:</td>
+                     <td>'.$row["year"].'</td>
+                     <td>Тип палива:</td>
+                     <td>'.$row["fuel"].'</td>
+                 </tr>
+                 <tr>
+                     <td>Об*єм двигуна:</td>
+                     <td>'.$row["volume"].' л</td>
+                     <td>Потужність:</td>
+                     <td>'.$row["horse_power"].' кс</td>
+                 </tr>
+             </table>
+         </div>';
+
          } 
     $dbh = null;
     
-      echo '
-      </a></form>
-      <script type="text/javascript">
-function submitMy(formNumb)
-{
-    document.forms["myform"+formNumb].submit(); 
-}
-</script>
-        <!-- <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p> -->
+      echo '     
+      
+    
+       
       </div>
-    </div>
-  </div>';
+    </div></a> 
+   
+  </div>'.$carInfoTable.'
+  <script type="text/javascript">
+  function submitMy(formNumb)
+  {
+      document.forms["myform"+formNumb].submit(); 
+  }</script>
+   </form> 
+  ';
         }
   ?>

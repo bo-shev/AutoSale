@@ -3,15 +3,14 @@ include_once 'siteParts/siteHeader.php';
 ?>
 
 <body>
+    
+<div class="contentSearchPage">
     <div style="display: block;
     text-align: center;">
         <?
             include_once 'searchform.php';
         ?>
     </div>
-
-</body>
-
 
 
 
@@ -94,11 +93,26 @@ function printCars($sql)
     include_once 'conect.php';
 
     $dbh = conectDb('car');
+
+    $iterator =0;
+    echo '<table class="searchResTable">';
     foreach($dbh->query($sql) as $row)
-         {           
+         {  
+             if ($iterator %2 == 0)
+             {
+                echo '<tr>';
+             }
+             echo '<td class="carRes">';         
             previewCar($row["id_car"]);
+            echo '</td>';  
+            if ($iterator %2 !=0)
+            {
+               echo '</tr>';
+            }
+            $iterator++;
          }
          $dbh = null;
+    echo '</table>';
 }
 
 
@@ -112,3 +126,9 @@ if(array_key_exists('brand',$_POST))
 }//,$_POST['maxyear']
 
 ?>
+
+
+
+
+</div>
+</body>

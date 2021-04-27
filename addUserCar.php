@@ -2,16 +2,14 @@
     include_once 'siteParts/usercheck.php';
     $user = checkUser();
 
-    if ($user == false || $user['role'] == 'user')
+    if ($user == false)
     {
     header('Location: http://salo0n/login.php');
     }
-        
     include_once 'siteparts/siteHeader.php';
 ?>
-
 <div class="contentSearchPage regandlog"> <br><br><br>
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="addUpload.php" method="post" enctype="multipart/form-data">
   <span>Виберіть фото: </span><input type="file" name="images[]" multiple>
 
   <table border="0" >
@@ -45,3 +43,4 @@
   <button type="submit">Надіслати</button>
 </form>
 </div>
+

@@ -237,7 +237,7 @@ echo '
     include_once 'conect.php';
     $dbh = conectDb('car');
 
-    $sql = "SELECT photos.pach_poto FROM photos WHERE photos.fid_car = $id_car"; //$id_car
+    $sql = "SELECT auction_photos.pach_poto FROM auction_photos WHERE auction_photos.fid_car = $id_car"; //$id_car
 
     $i = 1;
 

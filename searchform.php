@@ -47,9 +47,9 @@
             <td>
                 <select class="fuelselect" name="fuel">
                 <option value="0">-----</option>
-                    <option value="Бензин">Бензин</option>
-                    <option value="Дизель">Дизель</option>
-                    <option value="Електро">Електро</option>
+                    <option value="petrol">Бензин</option>
+                    <option value="diesel">Дизель</option>
+                    <option value="electric">Електро</option>
                 </select>
             </td>
             <td>Пробіг, км:</td>
@@ -92,8 +92,8 @@
             <td>
                 <select class="stateselect" name="car_condition">
                 <option value="0">-----</option>   
-                <option value="">Б\У</option>
-                    <option value="">Нова</option>
+                <option value="used">Б\У</option>
+                    <option value="new">Нова</option>
                 </select>
             </td>
             <td>Об'єм двигуна:</td>

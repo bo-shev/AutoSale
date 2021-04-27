@@ -20,7 +20,7 @@
             <img class ="logoclass" src="img/logo.png" alt="logo" width="140vw" height="76vh"   >
                         
             <ul class = "buttons">
-                <li class="sitename"><a href="#">AutoSale</a></li>
+                <li class="sitename"><a href="http://salo0n/carsPage.php">AutoSale</a></li>
                 <li><a href="https://ru.wikipedia.org/wiki/Ошибка_404"><span id="auction">Аукціон</span></a></li>
                 <li><a href="https://ru.wikipedia.org/wiki/Ошибка_404"><span id="newcars">Нові авто</span></a></li>
                 <li><a href="https://ru.wikipedia.org/wiki/Ошибка_404"><span id="weektop">Вибір тижня</span></a></li>
@@ -35,8 +35,33 @@
                 </ul>
                 
                 <ul class = "borderedbuttons">
-                    <li class = "sellauto"><a href="#">Продати авто</a></li>
-                    <li class = "login"><a href="#">Авторизація</a></li>
+                    <?
+                        include_once 'usercheck.php';
+                        //echo '<li class = "sellauto"><a href="#">'.checkUser().'</a></li>';
+                         if (checkUser() != false)
+                         {
+                             $user_info = checkUser();
+                             switch ($user_info['role']) {
+                                 case 'user':
+                                    echo '<li class = "sellauto"><a href="http://salo0n/addUserCar.php">Продати авто</a></li>'; 
+                                     break;
+                                 case 'moder':
+                                   echo '<li class = "sellauto"><a href="http://salo0n/usersCarPage.php">Переглянути заявки</a></li>'; 
+                                      break;
+                                case 'admin':
+                                   echo '<li class = "sellauto"><a href="http://salo0n/usersPage.php">Список користувачів</a></li>'; 
+                                      break;
+                             }
+                             
+                            echo '<li class = "sellauto"><a href="http://salo0n/userAbility.php">'.$user_info["user_login"].'</a></li>';   
+                            echo '<li class = "sellauto"><a href="logout.php">Вийти</a></li>';                   
+                         }
+                         else
+                         {echo '<li class = "login"><a href="login.php">Авторизація</a></li>';}
+
+                    ?>
+                    
+                    
                 </ul>
 
 

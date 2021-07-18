@@ -1,0 +1,699 @@
+html
+{
+    font-family: sans-serif;
+}
+
+body
+{
+    background-color: #474747;   
+    background-image: url("img/deja-vu.jpg");
+    background-attachment: fixed;
+}
+
+.topmenu
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sitename
+{
+    display: inline-block;
+    text-align: start !important;
+}
+
+.sitename > a
+{
+    border-bottom-style: solid;
+    border-bottom-color: #cbcbcb;
+    border-bottom-width: 2px;
+    font-size: 35px !important;
+    margin-right: 2vw;
+}
+
+.buttons 
+{
+    display: inline-block;
+    position: absolute;
+    margin-top: 1vh;
+    padding-left: 0.5vw;
+    min-width: 500px;
+}
+
+.buttons > li
+{
+    display: inline-block;
+    margin-left: 0.6vw;
+}
+
+.buttons > li > a:hover
+{
+    color: #ffffff;
+}
+
+.buttons > li > a
+{
+    color: #cbcbcb; /* цвет текста */
+
+    text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
+
+    font-size: 17px;
+
+    font-family: Century Gothic, serif;
+}
+
+.rightalign
+{
+    display: inline-block;
+    float: right;
+}
+
+.borderedbuttons
+{
+    display: inline-block;
+    float: right;
+    margin-top: 2.8vh;
+    padding-left: 0px;
+}
+
+.borderedbuttons > li
+{
+    display: inline-block;
+    margin-left: 1vw;
+    border: 1px #cbcbcb solid;
+    padding: 8px;
+    text-align: center;
+}
+
+.borderedbuttons a
+{
+    color: #cbcbcb; /* цвет текста */
+    text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
+    font-size: 16px;
+    font-family: Century Gothic, serif;
+}
+
+.borderedbuttons a:hover
+{
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: Century Gothic;
+    src: url("fonts/CenturyGothic.ttf");
+}
+
+.langmenu
+{
+    display: inline-block;
+    float: right;
+    vertical-align: center;
+    padding-left: 2vw;
+}
+
+.langmenu > li
+{
+    display: block;
+    margin-top: 0.9vh;
+    margin-bottom: 0.6vh;
+}
+
+.logoclass
+{
+    top: 0;
+    left: 0;
+    margin-top: 0.1vh;
+}
+
+.mainHead
+{
+    margin-left: 10vw; /* убрать внутренние отступы */
+    margin-right: 1vw;
+    min-width: 970px;
+}
+
+header
+{
+    position: fixed;
+    z-index: 1;
+    padding: 0; /* убрать внешние отступы */
+    top: 0; left: 0;
+    width: 100%;
+
+    border-bottom: #cbcbcb 2px solid;
+    
+    background: #323232;  ;
+}
+
+.searchform
+{
+    display: inline-block;
+    margin-top: 6vh;
+    background-color: #343434;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.searchtable
+{
+    border: #cbcbcb 1px solid;
+}
+
+.searchtable td
+{
+    color: #cbcbcb;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.searchtable select
+{
+    font-family: Century Gothic, serif;
+    background-color: #282828;
+    color: #cbcbcb;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 25px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 6px;
+}
+
+.searchtable option
+{
+    font-family: Century Gothic, serif;
+    color: #cbcbcb;
+}
+
+.markselect, .modelselect, .stateselect
+{
+    width: 200px;
+}
+
+
+.searchtable input[type=number]
+{
+    font-family: Century Gothic, serif;
+    background-color: #262626;
+    color: #cbcbcb;
+    font-size: 16px;
+    height: 21px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: #7e7e7e 1px solid;
+}
+
+.costfrom, .costto
+{
+    width: 92px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.fuelselect
+{
+    width: 170px;
+}
+
+.powerfrom, .powerto
+{
+    width: 77px;
+}
+
+.volumefrom, .volumeto
+{
+    width: 77px;
+}
+
+.yearfrom, .yearto
+{
+    width: 83px;
+}
+
+.distancefrom, .distanceto
+{
+    width: 90px;
+}
+
+.searchbutton div
+{
+    border: #cbcbcb 1px solid;
+    text-align: center;
+    float: right;
+    padding: 10px;
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.searchbutton a
+{
+    color: #cbcbcb; /* цвет текста */
+    text-decoration: none; /* убрать нижнее подчёркивание у ссылок */
+    font-size: 17px;
+    font-family: Century Gothic, serif;
+}
+
+.searchbutton a:hover
+{
+    color: white;
+}
+
+.contentSearchPage
+{
+    display: block;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: #cbcbcb 1px solid;
+    border-right: #cbcbcb 1px solid;
+    background-color: rgba(10, 10, 10, 0.6);
+    /*margin-bottom: -1vh;*/
+}
+
+.contentSearchPage [name *= "search"]
+{
+    text-align: center;
+}
+
+.contentSearchPage tr
+{
+    text-align: left;
+}
+
+
+
+/* /////////////////////////////////////////////// */
+
+
+
+/* Display the columns below each other instead of side by side on small screens */
+
+.column {
+    width: 100%;
+    display: inline-block;
+}
+
+/* Some left and right padding inside the container */
+.container {
+    display: block;
+    padding: 0 7px;
+    text-align: left;
+}
+
+.carName
+{
+    color: #ffffff;
+    font-family: Century Gothic, serif;
+    font-size: 22px;
+    float: left;
+    text-decoration: underline #cdcdcd;
+}
+
+
+.price
+{
+    float: right;
+    color: #a2ff8a;
+    font-family: Century Gothic, serif;
+    font-size: 22px;
+}
+
+.search_result
+{
+    text-align: center;
+    border: #cbcbcb 1px solid;
+    background-color: #353535;
+}
+
+.carRes
+{
+    text-align: center;
+    width: 491px;
+    display: inline-block;
+    margin-left: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carInfo
+{
+    display: block;
+    border-top: #858585 1px solid;
+    padding: 0 6px;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    color: #d6d6d6;
+}
+
+.carInfo td
+{
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+    
+.regandlog
+{
+   
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    color: #d6d6d6;   
+    text-align: center;
+}
+
+.button {
+    display: block;
+    color:#cdcdcd;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+  } 
+  .button:hover { background: rgba(255,255,255,.2); }
+  .button:active { background: white; }
+.right 
+{
+    position: relative;
+    float: right;
+    top: -100px;
+}
+.footerclass
+{
+    background-color: rgba(48, 48, 48, 0.5);
+    margin-top: 0px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: #cbcbcb 1px solid;
+    height: 70px;
+}
+
+.footercopyright
+{
+    position: relative;
+    font-family: Century Gothic, serif;
+    font-size: 14px;
+    color: #d6d6d6;
+    display: inline-block;
+    padding: 10px;
+}
+
+.footercontent
+{
+    font-family: Century Gothic, serif;
+    font-size: 14px;
+    color: #d6d6d6;
+    display: inline-block;
+    padding: 10px;
+    float: right;
+}
+
+.footermails a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #44cce9;
+}
+
+.footermails
+{
+    margin-left: 10px;
+    float: right;
+    width: 300px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+.useredit select
+{
+    font-family: Century Gothic, serif;
+    background-color: #282828;
+    color: #cbcbcb;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 25px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 6px;
+}
+
+.useredit input[name="submit"]
+{
+    background-color: #282828;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    color: #cbcbcb;
+}
+
+.loginclass
+{
+    padding-top: 6vh;
+}
+
+.loginclass input[name="login"], input[name="password"]
+{
+    font-family: Century Gothic, serif;
+    background-color: #262626;
+    color: #cbcbcb;
+    font-size: 16px;
+    height: 21px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: #7e7e7e 1px solid;
+}
+
+.loginclass input[type="checkbox"]
+{
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.loginclass input[name="submit"]
+{
+    background-color: rgba(10, 10, 10, 0);
+    border-width: 1px;
+    border-color: #e5e5e5;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    color: #cbcbcb;
+    padding: 4px 18px;
+    margin: 4px 0;
+}
+
+.loginclass a
+{
+    display: inline-block;
+    margin: 7px 0;
+    text-decoration: none;
+    color: #4adecd;
+}
+
+.loginclass a:hover
+{
+    display: inline-block;
+    margin: 7px 0;
+    text-decoration: none;
+    color: #93ffef;
+}
+
+.registerclass
+{
+    padding-top: 6vh;
+}
+
+.registerclass input[type="text"], input[name="password"]
+{
+    font-family: Century Gothic, serif;
+    background-color: #262626;
+    color: #cbcbcb;
+    font-size: 16px;
+    height: 21px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: #7e7e7e 1px solid;
+}
+
+
+.registerclass input[type="tel"], input[name="password"]
+{
+    font-family: Century Gothic, serif;
+    background-color: #262626;
+    color: #cbcbcb;
+    font-size: 16px;
+    height: 21px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: #7e7e7e 1px solid;
+}
+.registerclass input[name="submit"]
+{
+    background-color: rgba(10, 10, 10, 0);
+    border-width: 1px;
+    border-color: #e5e5e5;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    color: #cbcbcb;
+    padding: 4px 18px;
+    margin: 4px 0;
+}
+
+.uploadfotocontent span
+{
+    display: inline-block;
+    text-align: left;
+    alignment: left;
+}
+
+.uploadfotocontent input[type="file"]
+{
+    display: inline;
+    text-align: left;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+}
+
+.uploadfotocontent input[type="text"], input[type="number"]
+{
+    font-family: Century Gothic, serif;
+    background-color: #262626;
+    color: #cbcbcb;
+    font-size: 16px;
+    height: 21px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: #7e7e7e 1px solid;
+}
+
+.uploadfotocontent select
+{
+    font-family: Century Gothic, serif;
+    background-color: #282828;
+    color: #cbcbcb;
+    font-size: 16px;
+    height: 25px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.uploadfotocontent textarea
+{
+    resize: none;
+    background-color: #262626;
+    width: 800px;
+    height: 150px;
+    font-size: 16px;
+    font-family: Century Gothic, serif;
+    color: white;
+}
+
+.uploadfotocontent textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+.uploadfotocontent textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.uploadfotocontent textarea::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.uploadfotocontent button
+{
+    background-color: rgba(10, 10, 10, 0);
+    border-width: 1px;
+    border-color: #e5e5e5;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    color: #cbcbcb;
+    padding: 4px 18px;
+    margin: 4px 0;
+}
+
+.changecarinfotable input[type="text"], input[type="number"], select
+{
+    font-family: Century Gothic, serif;
+    background-color: #262626;
+    color: #cbcbcb;
+    font-size: 16px;
+    height: 21px;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: #7e7e7e 1px solid;
+}
+
+.changecarinfotable textarea
+{
+    resize: none;
+    background-color: #262626;
+    width: 260px;
+    height: 115px;
+    font-size: 16px;
+    font-family: Century Gothic, serif;
+    color: white;
+}
+
+.changecarinfotable textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+.changecarinfotable textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.changecarinfotable textarea::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.changecarinfoclass input[type=submit], input[type="button"]
+{
+    background-color: rgba(10, 10, 10, 0);
+    border-width: 1px;
+    border-color: #e5e5e5;
+    font-family: Century Gothic, serif;
+    font-size: 15px;
+    color: #cbcbcb;
+    padding: 2px 18px;
+    margin: 2px 0;
+}
+
+.auctionmoveclass 
+{
+    padding-top: 6vh;
+}
+
+.auctionmoveclass input[name="auctionend"] {
+    border: 1px solid #7a7a7a;
+    color: #ececec;
+    background-color: #282828;
+    outline: 0;
+    width: 176px;
+    font-family: Century Gothic, serif;
+    font-size: 15px;
+}
+
+.auctionmoveclass input[type=submit]
+{
+    background-color: rgba(10, 10, 10, 0);
+    border-width: 1px;
+    border-color: #e5e5e5;
+    font-family: Century Gothic, serif;
+    font-size: 16px;
+    color: #cbcbcb;
+    padding: 2px 18px;
+    margin: 4px 0;
+}

@@ -27,13 +27,15 @@ echo '<tr><td>Потужність:</td><td>'.$carInfo["horsePower"].' кс</td>
 echo '<tr><td>Пробіг:</td><td>'.$carInfo["distance"].'км</td></tr>';
 echo '</table>';
 
-
-echo '<br>';
-echo ' <span class="buyButton"><a href="../Controllers/buyingController.php?'.$_GET["item_id"].'"><span  >Придбати авто</span></a>';
+if ($user_info['role'] == "admin")
+{
+    echo '<br> <a class="button" style=" font-size:18px " href="../Controllers/ChangeCarInfoController.php?car_id='.$_GET["item_id"].'">Редагування сторінки</a>';
+}
+//echo '<br>';
+echo ' <span class="buyButton"><a href="../Controllers/buyingController.php?car_id='.$_GET["item_id"].'"><span  >Придбати авто</span></a>';
 echo '</div>';
 
 
-// echo ' <span class="buyButton"><a href="javascript: submitMy('.$id_car.')"><span  >Придбати авто</span></a>';
 echo '</div></div>';
 
 echo '<span class="descName">Опис:</span>';

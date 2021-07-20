@@ -79,6 +79,7 @@ class Car
         );
         return $carInfo;
     }
+
 }
 
 class GoodsInfo
@@ -250,3 +251,100 @@ class SearchCars
         return $carsObjArray;
     }
 }
+
+class ChangeCarInfo
+{
+    use CarShop;
+
+    private $dataBase;
+
+    public function __construct()
+    {
+        $this->dataBase = $this->prepareConnectionDb();
+    }
+
+    public function changeCarInfo($id, $brand, $model,$price, $horsePower, $volume, $fuelType, $carMileage, $year, $description)
+    {
+        $smth= $this->dataBase->dbh->prepare("UPDATE cars SET brand = :brand , model = :model, price = :price WHERE id=:id;");
+
+        $smth->bindParam(':id', $id);
+        $smth->bindParam(':brand', $brand);
+        $smth->bindParam(':model', $model);
+        $smth->bindParam(':price', $price);
+        $smth->execute();
+
+        $smth= $this->dataBase->dbh->prepare("UPDATE car_info SET horse_power = :horsePower , volume = :volume, fuel_type = :fuelType, car_mileage = :carMileage, year = :year, description = :description WHERE fk_car_id=:id;");
+
+        $smth->bindParam(':id', $id);
+        $smth->bindParam(':horsePower', $horsePower);
+        $smth->bindParam(':volume', $volume);
+        $smth->bindParam(':fuelType', $fuelType);
+        $smth->bindParam(':carMileage', $carMileage);
+        $smth->bindParam(':year', $year);
+        $smth->bindParam(':description', $description);
+        $smth->execute();
+    }
+
+    private  function deletePhotoFromFolder($photoName)
+    {
+        unlink('../upload/'.$photoName);
+    }
+
+    private function requestToDb($id, $sql)
+    {
+        $smth=$this->dataBase->dbh->prepare($sql);
+        $smth->bindParam(':id', $id);
+        $smth->execute();
+        return $smth;
+    }
+
+    public function deleteCar($id)
+    {
+        $smth = $this->requestToDb($id, "SELECT name FROM photos WHERE fk_goods_id = :id");
+        foreach ($smth->fetchAll() as $row)
+        {
+            $this->deletePhotoFromFolder($row['name']);
+        }
+        $this->requestToDb($id, "DELETE FROM `photos` WHERE fk_goods_id = :id");
+        $this->requestToDb($id, "DELETE FROM `car_info` WHERE fk_car_id = :id");
+        $this->requestToDb($id, "DELETE FROM `cars` WHERE `cars`.`id` = :id");
+        $this->requestToDb($id, "DELETE FROM `goods` WHERE `goods`.`id` = :id");
+    }
+}
+
+class Orders
+{
+    use CarShop;
+
+    private $dataBase;
+
+    public function __construct()
+    {
+        $this->dataBase = $this->prepareConnectionDb();
+    }
+
+    public function makeOrder($itemId, $userId)
+    {
+        $smth=$this->dataBase->dbh->prepare("INSERT INTO `orders` (`id`, `fk_user_id`, `fk_car_id`) VALUES (NULL, :userId, :itemId)");
+        $smth->bindParam(':itemId', $itemId);
+        $smth->bindParam(':userId', $userId);
+        $smth->execute();
+    }
+
+    public function getOrdersInfo()
+    {
+        $smth=$this->dataBase->dbh->prepare("SELECT users.id AS user_id, users.user_login, users.user_mail, users.user_number, orders.id AS order_id, cars.brand, cars.model, cars.price FROM users JOIN orders ON users.id=orders.fk_user_id JOIN cars ON orders.fk_car_id=cars.id");
+        $smth->execute();
+
+        return $smth->fetchAll();
+    }
+
+    public function deleteOrderById($id)
+    {
+        $smth=$this->dataBase->dbh->prepare("DELETE FROM `orders` WHERE `orders`.`id` = :id");
+        $smth->bindParam(':id', $id);
+        $smth->execute();
+    }
+}
+
+

@@ -17,10 +17,10 @@
     <nav class="mainHead">
 
         <ul class="topmenu">
-            <img class ="logoclass" src="../img/logo.png" alt="logo" width="140vw" height="76vh"   >
+            <a href="../Controllers/SearchController.php"> <img class ="logoclass" src="../img/logo.png" alt="logo" width="140vw" height="76vh"   ></a>
                         
             <ul class = "buttons">
-                <li class="sitename"><a href="#">AutoSale</a></li>
+                <li class="sitename"><a href="../Controllers/SearchController.php">AutoSale</a></li>
                 <li><a href="https://salo0n/auctionCarsPage.php"><span id="auction">Аукціон</span></a></li>
                 <li><a href="https://ru.wikipedia.org/wiki/Ошибка_404"><span id="newcars">Нові авто</span></a></li>
                 <li><a href="https://ru.wikipedia.org/wiki/Ошибка_404"><span id="weektop">Вибір тижня</span></a></li>

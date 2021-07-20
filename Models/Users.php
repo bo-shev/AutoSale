@@ -13,6 +13,7 @@ class User implements IUser
 
     private $dataBase;
 
+    private $id;
     private $login;
     private $mail;
     private $number;
@@ -23,8 +24,18 @@ class User implements IUser
         $this->dataBase = $this->prepareConnectionDb();
     }
 
-    private function setUserInfo($userInfo)
+    public function setUserById($id)
     {
+        $smth=$this->dataBase->dbh->prepare("SELECT * FROM users WHERE id = :id ");
+        $smth->bindParam(':id', $id);
+        $smth->execute();
+
+        $this->setUserInfo($smth->fetch());
+    }
+
+    public function setUserInfo($userInfo)
+    {
+        $this->id = $userInfo['id'];
         $this->login = $userInfo['user_login'];
         $this->mail = $userInfo['user_mail'];
         $this->number = $userInfo['user_number'];
@@ -34,6 +45,7 @@ class User implements IUser
     public function getUserInfoArr()
     {
         $userInfo = array(
+            'id' => $this->id,
             'userLogin' => $this->login,
             'userMail' => $this->mail,
             'userNumber' => $this->number,
@@ -66,10 +78,46 @@ class User implements IUser
         }
     }
 
+    public function changeRole($new_role, $id)
+    {
+        $smth=$this->dataBase->dbh->prepare("UPDATE users SET ROLE = :new_role WHERE id = :id");
+        $smth->bindParam(':new_role', $new_role);
+        $smth->bindParam(':id', $id);
+        $smth->execute();
+    }
+
     public function logOut()
     {
         setcookie("id", "", time() - 3600*24*30*12, "/");
         setcookie("hash", "", time() - 3600*24*30*12, "/",null,null,true);
+    }
+}
+
+class AllUsers
+{
+    use CarShop;
+
+    private $dataBase;
+    private $users = array();
+
+    public function __construct()
+    {
+        $this->dataBase = $this->prepareConnectionDb();
+
+        $smth=$this->dataBase ->dbh->prepare("SELECT * FROM `users`");
+        $smth->execute();
+
+        foreach($smth->fetchAll() as $row)
+        {
+            $user = new User();
+            $user->setUserInfo($row);
+            array_push($this->users, $user);
+        }
+    }
+
+    public function getUsers()
+    {
+        return $this->users;
     }
 }
 

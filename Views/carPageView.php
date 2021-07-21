@@ -31,7 +31,7 @@ if ($user_info['role'] == "admin")
 {
     echo '<br> <a class="button" style=" font-size:18px " href="../Controllers/ChangeCarInfoController.php?car_id='.$_GET["item_id"].'">Редагування сторінки</a>';
 }
-//echo '<br>';
+
 echo ' <span class="buyButton"><a href="../Controllers/buyingController.php?car_id='.$_GET["item_id"].'"><span  >Придбати авто</span></a>';
 echo '</div>';
 

@@ -89,7 +89,7 @@ class GoodsInfo
     private function getColumnFromCars($column)
     {
         $dataBase = $this->prepareConnectionDb();
-        $smth=$dataBase->dbh->prepare("SELECT ".$column." FROM cars");
+        $smth=$dataBase->dbh->prepare("SELECT DISTINCT ".$column." FROM cars");
         $smth->execute();
 
         return $smth->fetchAll();
@@ -161,7 +161,7 @@ class SearchCars
 
     private function prepareRequest($brand, $fuel, $mindistance,$maxdistance, $model, $minpower, $maxpower, $minvalue,$maxvalue,$minprice,$maxprice,$minyear,$maxyear)
     {
-        $sql = "SELECT * FROM cars JOIN car_info ON cars.id = car_info.fk_car_id WHERE true";
+        $sql = "SELECT * FROM cars JOIN car_info ON cars.id = car_info.fk_car_id JOIN goods ON goods.id = car_info.fk_car_id WHERE true and goods.category='car'";
 
         if ($brand != "0")
         {
@@ -243,8 +243,6 @@ class SearchCars
             $carFormDb->setId($row['fk_car_id']);
 
             $carFormDb->setPhotos($row['fk_car_id']);
-           // $photoNames = new Photos($row['fk_car_id']);
-           // $carFormDb->setPhotos($photoNames->getPhotoNames());
 
             array_push($carsObjArray, $carFormDb);
         }

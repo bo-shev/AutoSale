@@ -1,2 +1,2 @@
 <?php
-echo 'hello';
+header("Location: Controllers/SearchController.php");

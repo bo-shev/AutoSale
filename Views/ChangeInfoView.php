@@ -51,6 +51,10 @@ echo ' <input name="idcar" type="hidden" value='.$_GET['car_id'].'>';
 
 echo '<input type="Submit" name="delete" value=" Видалити цей об`єкт">';
 echo '</form>';
+    echo '<form name="moveToAuction" action="../Controllers/AuctionController.php" method="post">';
+    echo ' <input name="idcar" type="hidden" value='.$_GET['car_id'].'>';
+    echo '<input type="Submit" name="moveToAuction" value="Винести авто на аукціон">';
+    echo '</form>';
 
 
     echo '</div>';

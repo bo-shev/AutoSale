@@ -21,7 +21,7 @@
                         
             <ul class = "buttons">
                 <li class="sitename"><a href="../Controllers/SearchController.php">AutoSale</a></li>
-                <li><a href="https://salo0n/auctionCarsPage.php"><span id="auction">Аукціон</span></a></li>
+                <li><a href="../Controllers/AuctionController.php?main_page=1"><span id="auction">Аукціон</span></a></li>
                 <li><a href="https://ru.wikipedia.org/wiki/Ошибка_404"><span id="newcars">Нові авто</span></a></li>
                 <li><a href="https://ru.wikipedia.org/wiki/Ошибка_404"><span id="weektop">Вибір тижня</span></a></li>
             </ul>

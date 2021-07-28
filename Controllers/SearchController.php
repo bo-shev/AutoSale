@@ -1,6 +1,7 @@
 <?php
 
-include_once "../models/Goods.php";
+include_once "../Models/GoodsInfo.php";
+include_once "../Models/SearchCars.php";
 
 class SearchCarController
 {
@@ -15,7 +16,6 @@ class SearchCarController
         return $models->getCarModels();
     }
 }
-
 
 $carFromDb = new SearchCars();
 

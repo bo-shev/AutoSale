@@ -1,6 +1,6 @@
 <?php
 
-include_once '../HtmlParts/siteHeader.php';
+include_once '../HtmlParts/SiteHeader.php';
 
 echo '<div class="contentSearchPage regandlog" style = "min-height: 90%"><br><br><br><br><br><br>';
 switch ($user_info['role'])
@@ -18,6 +18,6 @@ switch ($user_info['role'])
 
 }
 echo '</div>';
-include_once '../HtmlParts/footer.php';
+include_once '../HtmlParts/Footer.php';
 
 

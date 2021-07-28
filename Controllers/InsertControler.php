@@ -1,9 +1,10 @@
 <?php
 
-include_once "../models/Goods.php";
-include_once "../models/Photos.php";
+include_once "../models/AddCar.php";
+include_once "../models/Car.php";
+include_once "../models/PhotoUpload.php";
 
-class InsertCarController //implements Iinsert
+class InsertCarController
 {
     private $car;
     private $photos;
@@ -11,7 +12,7 @@ class InsertCarController //implements Iinsert
     public function __construct()
     {
         $this->car = new Car($_POST['brand'], $_POST['model'], $_POST['price'], $_POST['horsePower'], $_POST['volume'], $_POST['fuelType'], $_POST['carMileage'], $_POST['year'], $_POST['description']);
-        $this->photos = new Photo("car");
+        $this->photos = new PhotoUpload("car");
     }
 
     public function insertFiles()

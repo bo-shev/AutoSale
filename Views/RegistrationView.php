@@ -1,6 +1,6 @@
 
 <?php
-    include_once "../HtmlParts/siteHeader.php";
+    include_once "../HtmlParts/SiteHeader.php";
 ?>
 
 <div class="contentSearchPage" style= " min-height: 90%;">
@@ -23,7 +23,7 @@
                     }
                 }
             }
-            include_once "../HtmlParts/registrationForm.php";
+            include_once "../HtmlParts/RegistrationForm.php";
 
         ?>
 
@@ -31,5 +31,5 @@
 </div>
 
 <?php
-    include_once '../HtmlParts/footer.php';
+    include_once '../HtmlParts/Footer.php';
 ?>

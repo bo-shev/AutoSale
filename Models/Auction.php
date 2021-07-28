@@ -1,10 +1,10 @@
 <?php
 
-include_once 'Goods.php';
+require_once "../Models/WorkWithDb.php";
 
 class AuctionItem
 {
-    use CarShop;
+    use WorkWithDb;
 
     private $dataBase;
 

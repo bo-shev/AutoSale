@@ -1,11 +1,11 @@
 <?php
 
-include_once "../Models/Goods.php";
-include_once "../HtmlParts/siteHeader.php";
+
+include_once "../HtmlParts/SiteHeader.php";
 
 if ($user_info['role'] == "admin")
 {
-
+    include_once "../Models/Orders.php";
     $orders = new Orders();
 
     $ordersInfo = $orders->getOrdersInfo();
@@ -23,6 +23,6 @@ if ($user_info['role'] == "admin")
 else
 {
     $textForUser = "Відсутні права доступу до цієї сторінки";
-    include_once '../Views/infoForUserView.php';
+    include_once '../Views/InfoForUserView.php';
 }
 

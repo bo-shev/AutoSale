@@ -1,12 +1,12 @@
 
 <?php
-include_once "../HtmlParts/siteHeader.php";
+include_once "../HtmlParts/SiteHeader.php";
 
 if ($user_info['role'] != "admin")
 {
 
     $textForUser = "Відсутні права доступу до цієї сторінки";
-    include_once '../Views/infoForUserView.php';
+    include_once '../Views/InfoForUserView.php';
 }
 else {
     echo '<div class="contentSearchPage regandlog uploadfotocontent" style = "min-height: 90%;"> <br><br><br><br><br><br><br><br><br>
@@ -41,5 +41,5 @@ else {
 </div>';
 }
 
- include_once '../HtmlParts/footer.php';
+ include_once '../HtmlParts/Footer.php';
 ?>

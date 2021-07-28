@@ -1,5 +1,5 @@
 <?php
-include_once "../HtmlParts/siteHeader.php";
+include_once "../HtmlParts/SiteHeader.php";
 
 if ($user_info['role'] == "admin")
 {
@@ -39,5 +39,5 @@ echo '<div class="contentSearchPage regandlog useredit">
 </div>
 </div>';
 
-include_once "../HtmlParts/footer.php";
+include_once "../HtmlParts/Footer.php";
 ?>

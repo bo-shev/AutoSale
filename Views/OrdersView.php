@@ -1,5 +1,5 @@
 <?php
-include_once "../HtmlParts/siteHeader.php";
+include_once "../HtmlParts/SiteHeader.php";
 echo '<div class="contentSearchPage " style = "min-height: 100%"><br><br><br><br><br><br> ';
 
 
@@ -28,4 +28,4 @@ foreach ($ordersInfo as $row)
 
 echo "</div>";
 
-include_once "../HtmlParts/footer.php";
+include_once "../HtmlParts/Footer.php";

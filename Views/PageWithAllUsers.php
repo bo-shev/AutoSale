@@ -1,5 +1,5 @@
 <?php
-include_once "../HtmlParts/siteHeader.php";
+include_once "../HtmlParts/SiteHeader.php";
 echo '<br><br>';
 
 echo '<div class="contentSearchPage regandlog" style = "min-height: 90%;"><br><br><br>';
@@ -24,4 +24,4 @@ else
 }
 echo '</div>';
 
-include_once "../HtmlParts/footer.php";
+include_once "../HtmlParts/Footer.php";

@@ -1,12 +1,12 @@
 <?php
-include_once "../HtmlParts/siteHeader.php";
+include_once "../HtmlParts/SiteHeader.php";
 ?>
 
 <div class="contentSearchPage" style = "min-height: 100%;">
     <br><br><br><br>
     <div style="display: block;    text-align: center;">
         <?
-        include_once 'searchform.php';
+        include_once 'SearchForm.php';
         ?>
     </div>
     <table class="searchResTable">
@@ -72,5 +72,5 @@ include_once "../HtmlParts/siteHeader.php";
     </table>
 </div>
 <?php
-include_once "../HtmlParts/footer.php";
+include_once "../HtmlParts/Footer.php";
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once "../HtmlParts/siteHeader.php";
+include_once "../HtmlParts/SiteHeader.php";
 echo '<div class="contentSearchPage changecarinfoclass" style = "min-height: 90%;" > ';
 echo '<div class="mainPart">';
 echo '<div class="baseInfo">';
@@ -89,6 +89,6 @@ echo '<script type="text/javascript">
           }
           time();
           </script>';
-include_once "../HtmlParts/footer.php";
+include_once "../HtmlParts/Footer.php";
 
 

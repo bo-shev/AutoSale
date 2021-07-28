@@ -1,11 +1,19 @@
 <?php
 
-include_once "../models/Goods.php";
+if (isset($_GET["item_id"])){
 
-$item = new SearchItemById;
-$car = $item->getItemCarById($_GET["item_id"]);
+    include_once "../Models/SearchItemById.php";
 
-$carPhotos = $car->getPhotos();
-$carInfo = $car->getArrayCarInfo();
+    $item = new SearchItemById;
+    $car = $item->getItemCarById($_GET["item_id"]);
 
-include_once "../Views/carPageView.php";
+    $carPhotos = $car->getPhotos();
+    $carInfo = $car->getArrayCarInfo();
+
+    include_once "../Views/CarPageView.php";
+}
+else
+{
+    $textForUser = "Шуканий вами товар відсутній";
+    include_once '../Views/InfoForUserView.php';
+}

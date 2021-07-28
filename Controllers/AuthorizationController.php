@@ -1,6 +1,6 @@
 <?php
 
-include_once "../Models/Users.php";
+include_once "../Models/Authorization.php";
 
 $errorText = '';
 

@@ -1,5 +1,5 @@
 <?php
-    include_once "../HtmlParts/siteHeader.php";
+    include_once "../HtmlParts/SiteHeader.php";
 ?>
 <div class="contentSearchPage" style= " min-height: 90%;">
     <div class= "regandlog loginclass" style="top: 60px; display: block; position: relative; min-height: 90%;" >
@@ -16,5 +16,5 @@
     </div>
 </div>
 <?php
-    include_once "../HtmlParts/footer.php";
+    include_once "../HtmlParts/Footer.php";
 ?>

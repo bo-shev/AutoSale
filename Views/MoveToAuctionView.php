@@ -1,5 +1,5 @@
 <?php
-include_once "../HtmlParts/siteHeader.php";
+include_once "../HtmlParts/SiteHeader.php";
 echo '<div class=" contentSearchPage  regandlog auctionmoveclass" style = "min-height: 90%;" ><br><br><br><br>    ';
 
 echo '
@@ -17,4 +17,4 @@ echo '
         <input type="Submit" name="confirm" value=" Винести цей автомобіль на аукціон ">
     </form>';
 echo '</div>';
-include_once "../HtmlParts/footer.php";
+include_once "../HtmlParts/Footer.php";

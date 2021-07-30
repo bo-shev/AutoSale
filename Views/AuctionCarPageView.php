@@ -7,8 +7,8 @@ echo '<span id="currentprice" name="currentprice" class="priceView">Поточн
 
 echo '</div>';
 
-echo '<div style="float:left; margin-right: 10px;">';
-include '../Views/galery.php';
+echo '<div class="galerypos" >';
+include '../Views/Galery.php';
 echo '</div>';
 echo '<div class="search_result regandlog" style="display:inline-block;  ">';
 echo '<div style="float:left text-alight:center">';
@@ -46,9 +46,9 @@ else
 }
 echo '</div>';
 
-echo ' <div class="descContainer" style="display:block;position: relative;float:left; width:60% "> <span style="width:50%" class="descName">Опис:</span><br><span class = "description">'.$auctionCarInfo['description'].'</span> </div>';
+echo ' <div class="descContainer  descSize" > <span  class="descName descriptionwidth">Опис:</span><br><span class = "description">'.$auctionCarInfo['description'].'</span> </div>';
 
-echo '<div class="Specs" style="display:block;position: relative; float:right  ">';
+echo '<div class="Specs" style="display:block;position: relative; float:right;  ">';
 echo '<div  style=margin-left:20px>';
 echo '<span>Характеристики:</span>';
 echo '<table border="0" ><tr><td>Рік виготовлення:</td><td>'.$auctionCarInfo["year"].'</td></tr>';
@@ -63,7 +63,9 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 
-echo '<script type="text/javascript">
+echo '
+
+<script type="text/javascript">
         
           timeend=new Date("'.$date->format('F j, Y, H:i:s') .'");
           var timestr ="gfdgdfgdf";

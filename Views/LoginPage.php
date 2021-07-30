@@ -1,8 +1,8 @@
 <?php
     include_once "../HtmlParts/SiteHeader.php";
 ?>
-<div class="contentSearchPage" style= " min-height: 90%;">
-    <div class= "regandlog loginclass" style="top: 60px; display: block; position: relative; min-height: 90%;" >
+<div class="contentSearchPage pageheight" ">
+    <div class= "regandlog loginclass loginpos"  >
         <span><?php echo $errorText; ?></span>
         <form method="POST">
             <tr>

@@ -2,7 +2,7 @@
 
 include_once '../HtmlParts/SiteHeader.php';
 
-echo '<div class="contentSearchPage regandlog" style = "min-height: 90%"><br><br><br><br><br><br>';
+echo '<div class="contentSearchPage regandlog pageheight"><br><br><br><br><br><br>';
 switch ($user_info['role'])
 {
 

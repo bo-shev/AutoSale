@@ -3,7 +3,7 @@ include_once "../HtmlParts/SiteHeader.php";
 
 if ($user_info['role'] == "admin")
 {
-    echo '<br><br><br><div class="contentSearchPage regandlog" style = "min-height: 90%;"><br><br><br>';
+    echo '<br><br><br><div class="contentSearchPage regandlog pageheight" ><br><br><br>';
 
     echo '<span>Інформація про користувача:</span>';
     echo '<table border="0" ><tr><td>Логін користувача:</td><td>'.$userPageInfo["userLogin"].'</td></tr>';

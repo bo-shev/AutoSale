@@ -3,7 +3,7 @@
 include_once "../HtmlParts/SiteHeader.php";
 
 
-echo '<div class="contentViewPage" style = "min-height: 90%;">';
+echo '<div class="contentViewPage pageheight" >';
 echo '<body><div class="mainPart" ><br><br>';
 
 echo '<div class="baseInfo">';
@@ -15,7 +15,7 @@ echo '</div>';
 
 echo '<div class="imagesSpecs">';
 
-include '../Views/galery.php';
+include '../Views/Galery.php';
 
 
 echo '<div class="Specs">';
@@ -29,7 +29,7 @@ echo '</table>';
 
 if ($user_info['role'] == "admin")
 {
-    echo '<br> <a class="button" style=" font-size:18px " href="../Controllers/ChangeCarInfoController.php?car_id='.$_GET["item_id"].'">Редагування сторінки</a>';
+    echo '<br> <a class="button charsize" href="../Controllers/ChangeCarInfoController.php?car_id='.$_GET["item_id"].'">Редагування сторінки</a>';
 }
 
 echo ' <span class="buyButton"><a href="../Controllers/BuyingController.php?car_id='.$_GET["item_id"].'"><span  >Придбати авто</span></a>';

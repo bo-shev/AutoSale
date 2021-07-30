@@ -1,8 +1,10 @@
 <?php
 
+require_once "../Models/WorkWithDb.php";
+
 class Orders
 {
-    use CarShop;
+    use WorkWithDb;
 
     private $dataBase;
 

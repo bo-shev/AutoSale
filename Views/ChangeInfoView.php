@@ -3,9 +3,9 @@ include_once "../HtmlParts/SiteHeader.php";
 
 if ($user_info['role'] == "admin")
 {
-echo  '<br><br><br><div class="contentSearchPage regandlog changecarinfoclass" style = "min-height: 90%;"> <br><br><br>';
-echo ' <div style=" float: left;">';
-include '../Views/galery.php';
+echo  '<br><br><br><div class="contentSearchPage regandlog changecarinfoclass pageheight" > <br><br><br>';
+echo ' <div class="leftpos">';
+include '../Views/Galery.php';
 echo '</div>';
 
 if ($carInfo['brand'] == null)

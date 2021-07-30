@@ -3,8 +3,8 @@
     include_once "../HtmlParts/SiteHeader.php";
 ?>
 
-<div class="contentSearchPage" style= " min-height: 90%;">
-    <div class= "regandlog registerclass" style="top: 60px; display: block; position: relative; " >
+<div class="contentSearchPage pageheight" >
+    <div class= "regandlog registerclass loginpos"  >
         <?php
 
             if (isset($_POST['login']))

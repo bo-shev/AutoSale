@@ -8,7 +8,7 @@
     <title>AutoSale</title>
 
     <link rel="stylesheet" href="../Style/mainStyle.css">
-<!--    <script src="changeLanguage.js"></script>-->
+
 </head>
 
 <body>
@@ -50,21 +50,7 @@
 </header>
 
 
-<!-- <p id="temp" style="position: relative;"> Default</p>-->
-
-
 
 </body> 
 
-<!--<script>-->
-<!--    // setTimeout(() => , 500);-->
-<!--    changeText();-->
-<!--    var dataReload = document.getElementsByName("data-reload");-->
-<!--    for (let i = 0; i < dataReload.length; i++)-->
-<!--    {-->
-<!--        if ( dataReload[i].onclick == true) {-->
-<!--            setTimeout(() => location.reload(), 200); //function () { location.reload();}-->
-<!--        }-->
-<!--    }-->
-<!-- </script>-->
 </html>

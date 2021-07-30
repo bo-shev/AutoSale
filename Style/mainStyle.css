@@ -3,6 +3,48 @@ html
     font-family: sans-serif;
 }
 
+.pageheight
+{
+    min-height: 90%;
+}
+.descriptionwidth
+{
+    width:50%
+}
+.galerypos
+{
+    float:left; margin-right: 10px;
+
+}
+.leftpos
+{
+    float: left;
+}
+.descSize
+{
+    display:block;position: relative;float:left; width:60%;
+}
+.smallmargin
+{
+    margin: 10px;
+}
+.specPos
+{
+    display:block;position: relative; float:right;
+}
+.showpagebutton
+{
+    position:relative; top:30px;
+}
+.charsize
+{
+    font-size:18px
+}
+.loginpos
+{
+    top: 60px; display: block; position: relative; min-height: 90%;
+}
+
 body
 {
     background-color: #474747;   
@@ -697,3 +739,12 @@ html, body {
     padding: 2px 18px;
     margin: 4px 0;
 }
+
+
+
+
+
+
+
+
+

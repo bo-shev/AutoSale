@@ -2,7 +2,7 @@
 function showHeader()
 {
     include_once "../HtmlParts/SiteHeader.php";
-    echo '<div class="contentSearchPage changecarinfoclass"  style = "min-height: 90%;"> <br><br><br><br><br><br>';
+    echo '<div class="contentSearchPage changecarinfoclass pageheight"  > <br><br><br><br><br><br>';
 
 }
 

@@ -1,6 +1,6 @@
 <?php
 include_once "../HtmlParts/SiteHeader.php";
-echo '<div class="contentSearchPage " style = "min-height: 100%"><br><br><br><br><br><br> ';
+echo '<div class="contentSearchPage pageheight"><br><br><br><br><br><br> ';
 
 
 

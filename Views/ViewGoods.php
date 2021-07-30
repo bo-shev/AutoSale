@@ -2,7 +2,7 @@
 include_once "../HtmlParts/SiteHeader.php";
 ?>
 
-<div class="contentSearchPage" style = "min-height: 100%;">
+<div class="contentSearchPage pageheight" >
     <br><br><br><br>
     <div style="display: block;    text-align: center;">
         <?

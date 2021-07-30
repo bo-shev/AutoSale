@@ -1,6 +1,6 @@
 <?php
 include_once "../HtmlParts/SiteHeader.php";
-echo '<div class=" contentSearchPage  regandlog auctionmoveclass" style = "min-height: 90%;" ><br><br><br><br>    ';
+echo '<div class=" contentSearchPage  regandlog auctionmoveclass pageheight"  ><br><br><br><br>    ';
 
 echo '
     <form name="auctionLot" action="../Controllers/AuctionController.php" method="post">

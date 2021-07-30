@@ -9,7 +9,7 @@ if ($user_info['role'] != "admin")
     include_once '../Views/InfoForUserView.php';
 }
 else {
-    echo '<div class="contentSearchPage regandlog uploadfotocontent" style = "min-height: 90%;"> <br><br><br><br><br><br><br><br><br>
+    echo '<div class="contentSearchPage regandlog uploadfotocontent pageheight" > <br><br><br><br><br><br><br><br><br>
     <form action="../Controllers/InsertControler.php" method="post" enctype="multipart/form-data">
         <span>Виберіть фото: </span><input type="file" name="images[]" multiple required>
 

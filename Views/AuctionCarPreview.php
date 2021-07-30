@@ -3,7 +3,7 @@
 
 
 
-    echo '<div class="search_result regandlog" style="margin: 10px;"  >';
+    echo '<div class="search_result regandlog smallmargin" >';
     echo '<table class=" regandlog"><tr>';
     echo '<td>';
 
@@ -22,8 +22,8 @@
 
     echo '<td>';
 
-    echo '<div class="Specs" style="display:block;position: relative; float:right  ">';
-    echo '<div  style=margin-left:20px>';
+    echo '<div class="Specs specPos">';
+    echo '<div class=" smallmargin" >';
     echo '<span>Характеристики:</span>';
     echo '<table border="0" ><tr><td>Рік виготовлення:</td><td>' . $auctionCarInfo["year"] . '</td></tr>';
     echo '<tr><td>Двигун:</td><td>' . $auctionCarInfo["volume"] . ' л</td></tr>';
@@ -36,7 +36,7 @@
     echo '</td>';
 
     echo '<td>';
-    echo '<a href="?auction_car_id=' . $row['id_item'] . '" class="button right" style="position:relative; top:30px" >Переглянути сторінку</a>';
+    echo '<a href="?auction_car_id=' . $row['id_item'] . '" class=" showpagebutton button right "  >Переглянути сторінку</a>';
     echo '</td>';
 
     echo '</table>';

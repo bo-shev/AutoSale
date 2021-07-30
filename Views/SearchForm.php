@@ -93,14 +93,7 @@
                 <input type="number" class = "costto" min="0" max="100000000" placeholder="До" name="maxprice">
             </td>
 
-            <!--            <td>Стан:</td>-->
-<!--            <td>-->
-<!--                <select class="stateselect" name="car_condition">-->
-<!--                <option value="0">-----</option>-->
-<!--                <option value="used">Б\У</option>-->
-<!--                    <option value="new">Нова</option>-->
-<!--                </select>-->
-<!--            </td>-->
+
             <td>Об'єм двигуна:</td>
             <td>
                 <input type="number" class = "volumefrom" min="0" max="100" placeholder="Від" name="minvalue">
